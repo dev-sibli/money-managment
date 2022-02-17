@@ -1,4 +1,4 @@
-function getInputValue() {
-	console.log('It is working');
-}
-const working = getInputValue();
+document.getElementById('calculate-btn').addEventListener('click', function () {
+	const income = getInputValue('income-field');
+	console.log(income);
+});

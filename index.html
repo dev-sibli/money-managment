@@ -11,34 +11,75 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
-		<main class="bg-stone-100 w-5/6 mx-auto rounded-lg pt-1 mt-8">
-			<h1 class="text-3xl font-medium my-5 text-center">Money Management</h1>
+		<main>
+			<h1 class="text-5xl text-center font-bold mt-12 text-emerald-500">
+				Money Master
+			</h1>
 			<section
 				class="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 w-5/6 mx-auto mt-6"
 			>
-				<div><img src="/image/money.jpg" alt="" /></div>
-				<div class="bg-stone-800 text-white p-8 rounded">
-					<h3 class="text-2xl font-medium my-2 text-center">Income</h3>
+				<div>
+					<img src="/image/money.jpg" alt="" />
+				</div>
+				<div class="bg-gray-200 p-8 rounded">
+					<h3 class="text-2xl font-medium my-3">Income</h3>
+					<label class="text-base font-medium" class="text-lg" for="income"
+						>Income</label
+					>
+					<input id="income-field" class="block px-4 py-2 w-3/5" type="text" />
+					<h3 class="text-2xl font-medium my-5">Expenses</h3>
+					<label class="text-base font-medium" for="food">Food</label>
+					<input
+						id="food-field"
+						class="block px-4 py-2 w-3/5"
+						type="text"
+					/><br />
+					<label class="text-base font-medium" for="rent">Rent</label>
+					<input
+						id="rent-field"
+						class="block px-4 py-2 w-3/5"
+						type="text"
+					/><br />
+					<label class="text-base font-medium" for="clothes">Clothes</label>
+					<input
+						id="clothes-field"
+						class="block px-4 py-2 w-3/5"
+						type="text"
+					/><br />
+					<button
+						id="calculate-btn"
+						class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+					>
+						Calculate
+					</button>
+					<h3 class="text-xl font-medium mt-4">
+						Total Expenses: <span id="total-exp">00</span>
+					</h3>
+					<h3 class="text-xl font-medium my-4">
+						Balance: <span id="balance">00</span>
+					</h3>
 					<div class="flex">
-						<span class="text-lg px-2 py-2">Income: </span>
-						<input class="px-4 py-2 w-3/5" type="text" />
+						<label class="text-xl my-3 pr-3" for="save">Save:</label>
+						<input
+							id="savings-input"
+							class="block px-4 py-2 w-2/4"
+							type="text"
+						/>
+						<p class="p-3">%</p>
+						<button id="save-btn" class="bg-blue-500 font-bold px-4 rounded">
+							Save
+						</button>
 					</div>
-					<h3 class="text-2xl font-medium my-2 text-center">Expanses</h3>
-					<div class="flex mb-3">
-						<span class="text-lg px-2 py-2">Food: </span>
-						<input class="px-4 py-2 w-3/5 justify-items-center" type="text" />
-					</div>
-					<div class="flex mb-3">
-						<span class="text-lg px-2 py-2">Rent: </span>
-						<input class="px-4 py-2 w-3/5 justify-items-center" type="text" />
-					</div>
-					<div class="flex mb-3">
-						<span class="text-lg px-2 py-2">Clothes: </span>
-						<input class="px-4 py-2 w-3/5" type="text" />
-					</div>
+					<h3 class="text-xl font-medium mt-4">
+						Saving Amount: <span id="savings-amount">00</span>
+					</h3>
+					<h3 class="text-xl font-medium my-4">
+						Remaining Balance: <span id="remaining-balance">00</span>
+					</h3>
 				</div>
 			</section>
 		</main>
+
 		<!-- Java Script Link  -->
 		<script src="/js/app.js"></script>
 	</body>
