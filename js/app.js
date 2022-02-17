@@ -11,7 +11,16 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 	const clothes = getInputValue('clothes-field');
 	const totalExpense = document.getElementById('total-expense');
 	const balance = document.getElementById('balance');
-	const totalCost = food + rent + clothes;
-	totalExpense.innerText = totalCost;
-	balance.innerText = income - totalCost;
+
+	if (income >= 0 && food >= 0 && rent >= 0 && clothes >= 0) {
+		const totalCost = food + rent + clothes;
+		if (income >= totalCost) {
+			totalExpense.innerText = totalCost;
+			balance.innerText = income - totalCost;
+		} else {
+			alert('Please spend less money than income');
+		}
+	} else {
+		window.alert('Please Input positive number');
+	}
 });
