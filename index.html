@@ -18,10 +18,10 @@
 			<section
 				class="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 w-5/6 mx-auto mt-6"
 			>
-				<div>
+				<div class="w-4/4">
 					<img src="/image/money.jpg" alt="" />
 				</div>
-				<div class="bg-gray-200 p-8 rounded">
+				<div class="bg-gray-200 p-6 rounded w-4/4">
 					<h3 class="text-2xl font-medium my-3">Income</h3>
 					<label class="text-base font-medium" class="text-lg" for="income"
 						>Income</label
@@ -52,30 +52,38 @@
 					>
 						Calculate
 					</button>
-					<h3 class="text-xl font-medium mt-4">
-						Total Expenses: <span id="total-exp">00</span>
-					</h3>
-					<h3 class="text-xl font-medium my-4">
-						Balance: <span id="balance">00</span>
-					</h3>
+					
+						<h3 class="text-xl font-medium mt-4">
+							Total Expenses: <span id="total-exp">00</span>
+						</h3>
+						<h3 class="text-xl font-medium my-4">
+							Balance: <span id="balance">00</span>
+						</h3>
+				
 					<div class="flex">
-						<label class="text-xl my-3 pr-3" for="save">Save:</label>
+						<label class="text-xl font-medium my-3 pr-3" for="save"
+							>Save:</label
+						>
 						<input
 							id="savings-input"
 							class="block px-4 py-2 w-2/4"
 							type="text"
 						/>
 						<p class="p-3">%</p>
-						<button id="save-btn" class="bg-blue-500 font-bold px-4 rounded">
+						<button
+							id="save-btn"
+							class="bg-blue-500 text-white font-bold px-4 rounded"
+						>
 							Save
 						</button>
 					</div>
-					<h3 class="text-xl font-medium mt-4">
-						Saving Amount: <span id="savings-amount">00</span>
-					</h3>
-					<h3 class="text-xl font-medium my-4">
-						Remaining Balance: <span id="remaining-balance">00</span>
-					</h3>
+						<h3 class="text-xl font-medium mt-4">
+							Saving Amount: <span id="savings-amount">00</span>
+						</h3>
+						<h3 class="text-xl font-medium my-4">
+							Remaining Balance: <span id="remaining-balance">00</span>
+						</h3>
+					</div>
 				</div>
 			</section>
 		</main>
