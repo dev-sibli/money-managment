@@ -39,7 +39,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
 	// Save button Error handling
 	if (savingsInput >= 0) {
-		if (savingsAmount < balanceNumber) {
+		if (savingsAmount <= balanceNumber) {
 			savings.innerText = savingsAmount;
 			remainingBalance.innerText = balanceNumber - savingsAmount;
 		} else {
