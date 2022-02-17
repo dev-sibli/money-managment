@@ -3,7 +3,6 @@ function getInputValue(inputId) {
 	const convertedValue = parseFloat(inputValue);
 	return convertedValue;
 }
-
 document.getElementById('calculate-btn').addEventListener('click', function () {
 	const income = getInputValue('income-field');
 	const food = getInputValue('food-field');
@@ -22,5 +21,26 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 		}
 	} else {
 		window.alert('Please Input positive number');
+	}
+});
+document.getElementById('save-btn').addEventListener('click', function () {
+	const income = getInputValue('income-field');
+	const balance = document.getElementById('balance');
+	const savingsInput = getInputValue('savings-input');
+	const savings = document.getElementById('savings-amount');
+	const remainingBalance = document.getElementById('remaining-balance');
+	const balanceText = balance.innerText;
+	const balanceNumber = parseFloat(balanceText);
+	const savingsAmount = (income / 100) * savingsInput;
+
+	if (savingsInput >= 0) {
+		if (savingsAmount < balanceNumber) {
+			savings.innerText = savingsAmount;
+			remainingBalance.innerText = balanceNumber - savingsAmount;
+		} else {
+			alert('Please deposit less than the balance amount');
+		}
+	} else {
+		alert('Please input a positive number');
 	}
 });
